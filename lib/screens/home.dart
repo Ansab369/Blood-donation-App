@@ -15,6 +15,11 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final CollectionReference donor =
       FirebaseFirestore.instance.collection('donor');
+
+  void deleteDonor(id) {
+    donor.doc(id).delete();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -106,6 +111,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         IconButton(
                             onPressed: () {
                               //! delete
+                              deleteDonor(donorSnap.id);
                             },
                             icon: Icon(
                               Icons.delete,
