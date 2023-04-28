@@ -3,6 +3,7 @@
 import 'package:blood_donation_app/firebase_options.dart';
 import 'package:blood_donation_app/screens/add.dart';
 import 'package:blood_donation_app/screens/home.dart';
+import 'package:blood_donation_app/screens/update.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
       routes: {
         'home': (context) => HomeScreen(),
         'add': (context) => AddUser(),
+        'update': (context) => UpdateUser(),
       },
       initialRoute: 'home',
     );

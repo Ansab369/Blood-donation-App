@@ -90,6 +90,13 @@ class _HomeScreenState extends State<HomeScreen> {
                         IconButton(
                             onPressed: () {
                               //! update
+                              Navigator.pushNamed(context, 'update',
+                                  arguments: {
+                                    'name': donorSnap['name'],
+                                    'phone': donorSnap['phone'].toString(),
+                                    'group': donorSnap['group'],
+                                    'id': donorSnap.id
+                                  });
                             },
                             icon: Icon(
                               Icons.edit,
